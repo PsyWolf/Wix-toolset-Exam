@@ -1,0 +1,3 @@
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\cab1.cab
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\myAppSetup.msi
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\myAppSetup.wixpdb

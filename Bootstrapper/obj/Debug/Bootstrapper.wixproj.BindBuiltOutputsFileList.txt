@@ -1,0 +1,2 @@
+C:\Users\Yakov\Source\Repos\myAppSetup\Bootstrapper\bin\Debug\Bootstrapper.exe
+C:\Users\Yakov\Source\Repos\myAppSetup\Bootstrapper\bin\Debug\Bootstrapper.wixpdb

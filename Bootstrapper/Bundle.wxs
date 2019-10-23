@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+  <Bundle Name="Bootstrapper1" Version="1.0.0.0" Manufacturer="WiXInstaller" UpgradeCode="32886120-2e36-4e35-b024-0656b64c6569">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkLicense">
+      <bal:WixStandardBootstrapperApplication LicenseUrl="" ThemeFile="res/MyCustomBootstrapperTheme.xml"
+        LocalizationFile="res/MyCustomBootstrapperTheme.wxl" />
+    </BootstrapperApplicationRef>
+
+    <Variable Name="InstallAll" Type="numeric" Value="1" />
+
+    <Variable Name="InstallLicenseOnly" Type="numeric" Value="0" />
+
+    <Chain DisableSystemRestore="yes">
+      <ExePackage InstallCondition="VersionNT64 AND InstallAll = 1" SourceFile="prerequisites/VC_redist.x64.exe" />
+      <ExePackage InstallCondition="NOT VersionNT64" SourceFile="prerequisites/VC_redist.x86.exe" />
+      <MsiPackage SourceFile="$(var.myAppSetup.TargetDir)myAppSetup.msi" DisplayInternalUI='yes' />
+    </Chain>
+  </Bundle>
+</Wix>

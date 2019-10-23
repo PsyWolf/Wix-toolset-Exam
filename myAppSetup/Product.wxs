@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Product Id="b387369e-959f-4b12-a9e0-0cb10afc98c0" Name="myAppSetup" Language="1033" Version="1.0.0.0" Manufacturer="WiXInstaller" UpgradeCode="a1926c2e-2758-4c96-98f4-bd9c9097bf8a">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <UIRef Id="WixUI_InstallDir"/>
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="myAppSetup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="myAppSetup" />
+			</Directory>
+		</Directory>
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="ProductComponent" Guid="*">
+        <File Name="License.xml"/>
+      </Component>
+      <Component Id="cmpAddTracing"
+           Guid="{07A2DF2B-B5AF-4277-9304-4D6CAEBF7BD5}"
+           KeyPath="yes">
+        <util:XmlConfig Id="setConnString"
+          File="[INSTALLFOLDER]License.xml"
+          Action="create"
+          On="install"
+          Node="value"
+          Name="value"
+          Value="[INSTALLFOLDER]" ElementPath="//configuration/appSettings/add[\[]@key='InstalledInFolder'[\]]"
+          Sequence="1" />
+      </Component>
+    </ComponentGroup>
+	</Fragment>
+</Wix>

@@ -1,0 +1,7 @@
+obj\Debug\Product.wixobj
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\cab1.cab
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\myAppSetup.msi
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\myAppSetup.wixpdb
+obj\Debug\myAppSetup.wixproj.BindContentsFileListnull.txt
+obj\Debug\myAppSetup.wixproj.BindOutputsFileListnull.txt
+obj\Debug\myAppSetup.wixproj.BindBuiltOutputsFileListnull.txt

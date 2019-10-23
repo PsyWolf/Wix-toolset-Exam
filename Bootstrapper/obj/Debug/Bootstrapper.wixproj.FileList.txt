@@ -1,0 +1,6 @@
+C:\Users\Yakov\Source\Repos\myAppSetup\Bootstrapper\bin\Debug\Bootstrapper.exe
+C:\Users\Yakov\Source\Repos\myAppSetup\Bootstrapper\bin\Debug\Bootstrapper.wixpdb
+obj\Debug\Bundle.wixobj
+obj\Debug\Bootstrapper.wixproj.BindContentsFileList.txt
+obj\Debug\Bootstrapper.wixproj.BindOutputsFileList.txt
+obj\Debug\Bootstrapper.wixproj.BindBuiltOutputsFileList.txt

@@ -1,0 +1,4 @@
+C:\Users\Yakov\Source\Repos\myAppSetup\Bootstrapper\prerequisites\VC_redist.x64.exe
+C:\Users\Yakov\Source\Repos\myAppSetup\Bootstrapper\prerequisites\VC_redist.x86.exe
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\myAppSetup.msi
+C:\Users\Yakov\Source\Repos\myAppSetup\myAppSetup\bin\Debug\cab1.cab
